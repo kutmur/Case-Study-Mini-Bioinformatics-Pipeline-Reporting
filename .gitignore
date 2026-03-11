@@ -1,3 +1,6 @@
+# Data (too large for git)
+data/
+
 # Snakemake
 .snakemake/
 
