@@ -1,0 +1,14 @@
+name: snakemake
+channels:
+  - bioconda
+  - conda-forge
+  - defaults
+dependencies:
+  - snakemake-minimal>=7.0
+  - nanoplot>=1.41
+  - python>=3.9
+  - biopython>=1.80
+  - pandas>=1.5
+  - matplotlib>=3.6
+  - seaborn>=0.12
+  - numpy>=1.23
