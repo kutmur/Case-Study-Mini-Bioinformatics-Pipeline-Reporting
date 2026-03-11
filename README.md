@@ -39,14 +39,23 @@ git clone https://github.com/<your-username>/Case-Study-Mini-Bioinformatics-Pipe
 cd Case-Study-Mini-Bioinformatics-Pipeline-Reporting
 ```
 
-### 2. Create and activate the Conda environment
+### 2. Add the input data
+
+The raw FASTQ file is not included in this repository due to its large size. Place your FASTQ file in the `data/` directory before running the pipeline:
+
+```bash
+mkdir -p data
+cp /path/to/your/barcode77.fastq data/
+```
+
+### 3. Create and activate the Conda environment
 
 ```bash
 conda env create -f environment.yml
 conda activate snakemake
 ```
 
-### 3. Run the pipeline
+### 4. Run the pipeline
 
 ```bash
 snakemake --cores all
@@ -57,7 +66,7 @@ This will:
 2. Run **read_stats.py** — a custom Python script that calculates GC content (%), read length, and mean Phred quality score for every individual read, saved as a CSV.
 3. Run **visualize.py** — generates histogram plots for all three metrics with KDE overlays and annotated mean/median lines, plus a summary statistics text file.
 
-### 4. View results
+### 5. View results
 
 All outputs are in the `results/` directory:
 - `results/nanoplot/barcode77/` — NanoPlot HTML report and plots
